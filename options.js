@@ -17,6 +17,41 @@ module.exports = {
                 [{ text: `Let's play again!`, callback_data: '/again' }]
             ]
         })
+    },
+    countLensesOptions: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [
+                    { text: '-', callback_data: '/decrease' },
+                    { text: '+', callback_data: '/increase' }
+                ]
+            ]
+        })
+    },
+    maxCapacityOptions:{
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [{text: 'wear new one', callback_data: '/resetCounter'}]
+            ]
+        })
+    },
+    registerOptions:{
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [{text: `Let's begin!`, callback_data: '/register'}]
+            ]
+        })
+    },
+    comeBackOptions: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [
+                    {text: 'reset', callback_data: '/resetCounter'},
+                    {text: 'keep counter',  callback_data: '/keep'}
+                ]
+            ]
+        })
     }
+
 
 }

@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.7.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2",
     "node-telegram-bot-api": "^0.59.0",
     "nodemon": "^2.0.20"
   }
