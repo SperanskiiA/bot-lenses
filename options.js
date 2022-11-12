@@ -28,17 +28,20 @@ module.exports = {
             ]
         })
     },
-    maxCapacityOptions:{
+    maxCapacityOptions: {
         reply_markup: JSON.stringify({
             inline_keyboard: [
-                [{text: 'wear new one', callback_data: '/resetCounter'}]
+                [
+                    { text: '-', callback_data: '/decrease' },
+                    { text: 'wear new one', callback_data: '/resetCounter' }
+                ]
             ]
         })
     },
-    registerOptions:{
+    registerOptions: {
         reply_markup: JSON.stringify({
             inline_keyboard: [
-                [{text: `Let's begin!`, callback_data: '/register'}]
+                [{ text: `Let's begin!`, callback_data: '/register' }]
             ]
         })
     },
@@ -46,9 +49,45 @@ module.exports = {
         reply_markup: JSON.stringify({
             inline_keyboard: [
                 [
-                    {text: 'reset', callback_data: '/resetCounter'},
-                    {text: 'keep counter',  callback_data: '/keep'}
+                    { text: 'reset', callback_data: '/resetCounter' },
+                    { text: 'keep counter', callback_data: '/keep' }
                 ]
+            ]
+        })
+    },
+    maxAmountOtions: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [{text: 'continue', callback_data: '/continueByDefault'},{ text: 'set amount', callback_data: '/setAmount' }],
+                [{text: 'back', callback_data: '/continue'}]
+            ]
+        })
+    },
+    continueOptions: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [{ text: 'continue', callback_data: '/continue' }]
+            ]
+        })
+    },
+    increaseOptions: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [{text: '+', callback_data: '/increase'}]
+            ]
+        })
+    },
+    setAmountOptionsFirst: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [{text: 'continue', callback_data: '/continueByDefault'},{ text: 'set amount', callback_data: '/setAmount' }]
+            ]
+        })
+    },
+    resetCounter: {
+        reply_markup: JSON.stringify({
+            inline_keyboard: [
+                [ { text: 'reset', callback_data: '/resetCounter' }]
             ]
         })
     }

@@ -15,6 +15,10 @@ const UserSchema = new mongoose.Schema({
     }, 
     prevValue: {
         type: Number
+    },
+    maxAmount: {
+        type: Number,
+        optional: true
     }
 }, {
     timestamps: true
